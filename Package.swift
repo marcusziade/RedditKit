@@ -19,6 +19,7 @@ let package = Package(
             name: "RedditKit",
             resources: [.process("Resources")]
         ),
+        .executableTarget(name: String("RedditCLI"), dependencies: ["RedditKit"]),
         .testTarget(
             name: "RedditKitTests",
             dependencies: ["RedditKit"]
