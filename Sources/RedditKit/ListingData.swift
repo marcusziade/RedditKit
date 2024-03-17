@@ -57,7 +57,7 @@ public struct PostData: Codable {
     public let approvedBy: String?
     public let isCreatedFromAdsUi: Bool?
     public let authorPremium: Bool?
-    public let thumbnail: String?
+    public let thumbnail: URL?
     public let edited: Edited?
     public let authorFlairCssClass: String?
     public let authorFlairRichtext: [AuthorFlairRichtext]?
@@ -78,7 +78,7 @@ public struct PostData: Codable {
     public let likes: Int?
     public let suggestedSort: String?
     public let bannedAtUtc: String?
-    public let urlOverriddenByDest: String?
+    public let urlOverriddenByDest: URL?
     public let viewCount: Int?
     public let archived: Bool?
     public let noFollow: Bool?
@@ -115,10 +115,10 @@ public struct PostData: Codable {
     public let modReports: [[String: String]]?
     public let authorPatreonFlair: Bool?
     public let authorFlairTextColor: String?
-    public let permalink: String?
+    public let permalink: URL?
     public let parentWhitelistStatus: String?
     public let stickied: Bool?
-    public let url: String?
+    public let url: URL?
     public let subredditSubscribers: Int?
     public let createdUtc: Double?
     public let numCrossposts: Int?
@@ -137,7 +137,7 @@ public struct Image: Codable {
 }
 
 public struct ImageSource: Codable {
-    public let url: String
+    public let url: URL
     public let width: Int
     public let height: Int
 }
@@ -165,20 +165,20 @@ public struct Media: Codable {
 }
 
 public struct MediaOembed: Codable {
-    public let providerUrl: String?
+    public let providerUrl: URL?
     public let description: String?
     public let title: String?
-    public let url: String?
-    public let thumbnailUrl: String?
+    public let url: URL?
+    public let thumbnailUrl: URL?
 }
 
 public struct Oembed: Codable {
-    public let providerUrl: String?
+    public let providerUrl: URL?
     public let description: String?
     public let title: String?
-    public let url: String?
+    public let url: URL?
     public let type: String?
-    public let thumbnailUrl: String?
+    public let thumbnailUrl: URL?
     public let version: String?
 }
 

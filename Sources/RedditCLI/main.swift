@@ -17,7 +17,9 @@ func getPostTitles(from url: URL, using networkManager: NetworkManager) async {
         let subredditData: RedditAPIResponse = try await networkManager.fetchData(from: url)
         for (index, child) in subredditData.data.children.enumerated() {
             if let title = child.data.title {
-                print("\(index + 1) \(title)")
+                print("\(index + 1). \(title)")
+                print("URL: \(child.data.url?.absoluteString ?? "N/A")")
+                print()
             } else {
                 print("Title not available")
             }
